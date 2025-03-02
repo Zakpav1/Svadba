@@ -1,27 +1,19 @@
-/* 
-   СТИЛИ ДЛЯ "ДОРОГОГО" ОФОРМЛЕНИЯ, А ТАКЖЕ АДАПТИВНОЙ ВЁРСТКИ 
-   ------------------------------------------
-   Шрифты (Playfair Display и Lora) подключены в <head> шаблонов:
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
-*/
-
-/* Сброс некоторых отступов */
+/* Сброс отступов и базовая настройка */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Общие стили для тела страницы */
 html, body {
   width: 100%;
   height: 100%;
 }
 
 body {
+  background-color: #fdf6f0;
   font-family: 'Lora', serif;
-  background: #fefefe;
-  color: #333;
+  color: #5b4b47;
 }
 
 /* Контейнер для центрирования контента */
@@ -34,22 +26,21 @@ body {
 
 /* Шапка */
 header {
-  background-color: #1c1c1c;  /* Тёмный фон */
-  color: #D4AF37;            /* Золотой текст */
+  background-color: #fbe3e1;
+  color: #b35f63;
   padding: 30px 0;
   text-align: center;
-  border-bottom: 2px solid #D4AF37;
+  border-bottom: 2px solid #e7c8c8;
 }
 
 header h1 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
-  margin: 0;
 }
 
-/* Навигация (flexbox) */
+/* Навигация */
 nav {
-  background: #fff;
+  background: #fce5e3;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -58,7 +49,6 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
   padding: 15px 0;
 }
 
@@ -69,60 +59,52 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-weight: bold;
-  color: #1c1c1c;
+  color: #b35f63;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #D4AF37;
+  color: #e08084;
 }
 
-/* ------------------------------
-   ГЛАВНАЯ СТРАНИЦА (index.html)
-   ------------------------------ */
-
-/* Hero-секция (приглашение) */
+/* HERO-секция (Главная страница) */
 .invitation {
   position: relative;
-  min-height: 50vh; /* Минимальная высота секции */
-  background: url('../img/wedding_bg.jpg') no-repeat center center;
+  height: 100vh;
+  background: url('static/img/flowers_bg.jpg') no-repeat center center;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: #fff;
-  display: flex;
-  align-items: center;       /* Вертикальное выравнивание текста */
-  justify-content: center;   /* Горизонтальное выравнивание текста */
-  padding: 100px 0;
 }
 
 .invitation::after {
   content: "";
   position: absolute;
-  top: 0; 
-  left: 0; 
-  right: 0; 
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Полупрозрачная маска поверх фона */
+  background-color: rgba(0,0,0,0.35);
   z-index: 1;
 }
 
 .invitation .container {
-  position: relative;  /* чтобы текст был над затемнением */
+  position: relative;
   z-index: 2;
 }
 
-/* Тексты внутри hero-секции */
 .invitation .subtitle {
   font-size: 24px;
   margin-bottom: 20px;
-  font-weight: 400;
 }
 
 .invitation .details {
   font-size: 32px;
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
-  font-weight: 400;
 }
 
 .invitation .date {
@@ -131,11 +113,9 @@ nav ul li a:hover {
   font-style: italic;
 }
 
-/* ------------------------------
-   СТРАНИЦА МЕСТА ПРОВЕДЕНИЯ (venue.html)
-   ------------------------------ */
+/* Секция Место проведения */
 .venue {
-  padding: 80px 0;
+  padding: 60px 0;
   text-align: center;
   background-color: #fff;
 }
@@ -145,31 +125,9 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 
-/* ------------------------------
-   КНОПКА
-   ------------------------------ */
-.btn {
-  display: inline-block;
-  background-color: #1c1c1c;
-  color: #D4AF37;
-  padding: 12px 30px;
-  font-size: 18px;
-  text-decoration: none;
-  border: 2px solid #D4AF37;
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 4px;
-}
-
-.btn:hover {
-  background-color: #D4AF37;
-  color: #1c1c1c;
-}
-
-/* ------------------------------
-   СТРАНИЦА РЕГИСТРАЦИИ (registration.html)
-   ------------------------------ */
+/* Секция Регистрации */
 .registration {
-  padding: 80px 0;
+  padding: 60px 0;
   text-align: center;
   background-color: #fff;
 }
@@ -179,61 +137,74 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 
-/* ------------------------------
-   ФУТЕР
-   ------------------------------ */
+/* Кнопка */
+.btn {
+  display: inline-block;
+  background-color: #b35f63;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  border: 2px solid #b35f63;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #b35f63;
+}
+
+/* Футер */
 footer {
-  background-color: #1c1c1c;
-  color: #D4AF37;
+  background-color: #fbe3e1;
+  color: #b35f63;
   text-align: center;
   padding: 20px 0;
   font-size: 14px;
-  margin-top: auto;
+  border-top: 2px solid #e7c8c8;
 }
 
-/* ------------------------------
-   АДАПТИВНОСТЬ (MEDIA QUERIES)
-   ------------------------------ */
+/* Адаптивность */
 @media (max-width: 768px) {
   header h1 {
     font-size: 32px;
-    margin: 0 10px;
   }
-
+  
   nav ul {
-    flex-direction: column;  /* Меню в столбик */
+    flex-direction: column;
   }
-
+  
   nav ul li {
     margin: 10px 0;
   }
-
+  
   .invitation {
+    height: auto;
+    min-height: 70vh;
     padding: 60px 0;
   }
-
+  
   .invitation .subtitle {
     font-size: 20px;
   }
-
+  
   .invitation .details {
     font-size: 26px;
   }
-
+  
   .invitation .date {
     font-size: 18px;
   }
-
+  
   .venue, .registration {
     padding: 40px 0;
   }
-
-  .venue .description,
-  .registration .description {
+  
+  .venue .description, .registration .description {
     font-size: 18px;
-    margin: 20px;
   }
-
+  
   .btn {
     font-size: 16px;
     padding: 10px 20px;
@@ -244,11 +215,11 @@ footer {
   .invitation .subtitle {
     font-size: 18px;
   }
-
+  
   .invitation .details {
     font-size: 22px;
   }
-
+  
   .invitation .date {
     font-size: 16px;
   }
