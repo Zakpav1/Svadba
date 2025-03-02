@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регистрация</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Регистрация</h1>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">Приглашение</a></li>
+      <li><a href="/venue">Место проведения</a></li>
+      <li><a href="/registration">Регистрация</a></li>
+    </ul>
+  </nav>
+  <section class="registration">
+    <div class="container">
+      <p class="description">Пожалуйста, подтвердите своё участие, заполнив форму ниже.</p>
+      <a class="btn" href="https://forms.gle/your-google-form-link" target="_blank">Перейти к регистрации</a>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Наталья &amp; Дмитрий. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>

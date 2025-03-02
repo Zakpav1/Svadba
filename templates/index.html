@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Приглашение на свадьбу</title>
+  <!-- Подключаем элегантные шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Наталья &amp; Дмитрий</h1>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">Приглашение</a></li>
+      <li><a href="/venue">Место проведения</a></li>
+      <li><a href="/registration">Регистрация</a></li>
+    </ul>
+  </nav>
+  <section class="invitation">
+    <div class="container">
+      <p class="subtitle">С огромной радостью приглашаем Вас</p>
+      <p class="details">на нашу свадьбу, чтобы разделить с нами этот волшебный момент</p>
+      <p class="date">25 декабря 2025</p>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Наталья &amp; Дмитрий. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>
