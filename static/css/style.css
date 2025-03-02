@@ -71,7 +71,7 @@ nav ul li a:hover {
 .invitation {
   position: relative;
   height: 100vh;
-  background: url('static/css/flowers_bg.jpg') no-repeat center center;
+  background: url('flowers_bg.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
